@@ -40,3 +40,6 @@ if st.button("Recommend"):
         with col2:
             st.write(f"### 🎬 {movie['title']}")
             st.write(f"Similarity: {movie['score']}")
+
+st.markdown("---")
+st.caption("This product uses the TMDB API but is not endorsed or certified by TMDB.")
