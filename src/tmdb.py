@@ -1,10 +1,16 @@
 import os
 import requests
+import streamlit as st
 from dotenv import load_dotenv
+
 
 load_dotenv()
 
 TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+
+if not TMDB_API_KEY:
+    TMDB_API_KEY = st.secrets["TMDB_API_KEY"]
+
 
 session = requests.Session()
 session.headers.update({
